@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>typeidea博客系统</title>
+</head>
+<body>
+    <ul>
+        {% for comment in comments %}
+        <li>
+            <a href="/post/{{ comment.target_id }}.html">{{ comment.target_title }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
