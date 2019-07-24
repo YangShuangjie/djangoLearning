@@ -6,7 +6,7 @@ from django.urls import reverse
 from .models import Category, Tag, Post
 from .adminforms import PostAdminForm
 from typeidea.custom_site import custom_site
-
+from typeidea.BaseModelAdmin import BaseModelAdmin
 
 # Register your models here.
 class PostInline(admin.TabularInline):  # admin.StackedInline
@@ -17,16 +17,16 @@ class PostInline(admin.TabularInline):  # admin.StackedInline
 #　等同于admin.site.register(Category, CategoryAdmin)
 #  custom_site.register(Category,CategoryAdmin)
 @admin.register(Category,site=custom_site)
-class CategoryAdmin(admin.ModelAdmin):
+class CategoryAdmin(BaseModelAdmin):
     list_display = (
         'owner', 'name', 'status',
         'is_nav', 'created_time', 'post_count'
     )
     fields = ('owner', 'name', 'status', 'is_nav')
 
-    def save_model(self, request, obj, form, change):
-        obj.owner = request.user
-        return super(CategoryAdmin, self).save_model(request, obj, form, change)
+    # def save_model(self, request, obj, form, change):
+    #     obj.owner = request.user
+    #     return super(CategoryAdmin, self).save_model(request, obj, form, change)
 
     def post_count(self, obj):
         return obj.post_set.count()
@@ -37,13 +37,13 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 @admin.register(Tag,site=custom_site)
-class TagAdmin(admin.ModelAdmin):
+class TagAdmin(BaseModelAdmin):
     list_display = ('owner', 'name', 'status', 'created_time')
     fields = ('owner', 'name', 'status')
 
-    def save_model(self, request, obj, form, change):
-        obj.owner = request.user
-        return super(TagAdmin, self).save_model(request, obj, form, change)
+    # def save_model(self, request, obj, form, change):
+    #     obj.owner = request.user
+    #     return super(TagAdmin, self).save_model(request, obj, form, change)
 
 
 class CategoryOwnerFilter(admin.SimpleListFilter):
@@ -62,7 +62,7 @@ class CategoryOwnerFilter(admin.SimpleListFilter):
 
 
 @admin.register(Post, site=custom_site)
-class PostAdmin(admin.ModelAdmin):
+class PostAdmin(BaseModelAdmin):
     form = PostAdminForm
     # exclude = ('owner',) #限定不展示的字段
     list_display = (
@@ -117,9 +117,9 @@ class PostAdmin(admin.ModelAdmin):
     #     obj.owner = request.user
     #     return super(PostAdmin, self).save_model(request, obj, form, change)
 
-    def get_queryset(self, request):
-        qs = super(PostAdmin, self).get_queryset(request)
-        return qs.filter(owner=request.user)
+    # def get_queryset(self, request):
+    #     qs = super(PostAdmin, self).get_queryset(request)
+    #     return qs.filter(owner=request.user)
 
     # # 自定义后端post管理的css和js
     # class Media:
