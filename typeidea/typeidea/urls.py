@@ -40,15 +40,17 @@ function view url config
 '''
 class-based view url config
 '''
-from blog.views import IndexView, CategoryView, TagView, PostDetailView
+from blog.views import IndexView, CategoryView, TagView, PostDetailView, SearchView, AuthorView
 
 urlpatterns = [
-    url(r'^$',IndexView.as_view(),name='index'),
-    url(r'^category/(?P<category_id>\d+)/$',CategoryView.as_view(),name='category-list'),
-    url(r'^tag/(?P<tag_id>\d+)/$',TagView.as_view(),name='tag-list'),
-    url(r'^post/(?P<post_id>\d+).html$',PostDetailView.as_view(),name='post-detail'),
+    url(r'^$', IndexView.as_view(), name='index'),
+    url(r'^category/(?P<category_id>\d+)/$', CategoryView.as_view(), name='category-list'),
+    url(r'^tag/(?P<tag_id>\d+)/$', TagView.as_view(), name='tag-list'),
+    url(r'^post/(?P<post_id>\d+).html$', PostDetailView.as_view(), name='post-detail'),
+    url(r"^search/$", SearchView.as_view(), name='search'),
+    url(r'^author/(?P<owner_id>\d+)/$', AuthorView.as_view(), name='author'),
 
     # path("links/",links,name='links'),
-    path("user_admin/", admin.site.urls,name='user-admin'),
-    path("cus_admin/", custom_site.urls,name='cus-admin'),
+    path("user_admin/", admin.site.urls, name='user-admin'),
+    path("cus_admin/", custom_site.urls, name='cus-admin'),
 ]

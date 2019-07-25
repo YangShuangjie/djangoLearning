@@ -50,6 +50,7 @@ class-based view
 
 from django.views.generic import ListView, DetailView
 from django.shortcuts import get_object_or_404
+from django.db.models import Q
 
 from .models import Post, Tag, Category
 from config.models import SideBar
@@ -64,6 +65,29 @@ class IndexView(ListView):
     paginate_by = 3
     context_object_name = 'post_list'
     template_name = 'blog/list.html'
+
+
+class SearchView(IndexView):
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data()
+        context.update(
+            {'keyword': self.request.GET.get('keyword', '')}
+        )
+        return context
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        keyword = self.request.GET.get('keyword')
+        if not keyword:
+            return queryset
+        return queryset.filter(Q(title__icontains=keyword) | Q(desc__icontains=keyword))
+
+
+class AuthorView(IndexView):
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        author_id = self.kwargs.get('owner_id')
+        return queryset.filter(owner_id=author_id)
 
 
 class CategoryView(IndexView):
