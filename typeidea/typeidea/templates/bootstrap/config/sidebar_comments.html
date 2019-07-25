@@ -6,11 +6,12 @@
 </head>
 <body>
     <ul>
-        {% for post in posts %}
+        {% for comment in comments %}
         <li>
-            <a href="/post/{{ post.id }}.html">{{ post.title }}</a>
+            <a href="{% url 'post-detail' comment.target_id %}">{{ comment.target_title }}</a>
         </li>
         {% endfor %}
     </ul>
+
 </body>
 </html>

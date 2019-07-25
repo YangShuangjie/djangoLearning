@@ -55,10 +55,13 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'typeidea.urls'
 
+# THEME = 'default'
+THEME ='bootstrap'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')]
+        'DIRS': [os.path.join(BASE_DIR, 'templates',THEME)]
         ,
         'APP_DIRS': True,
         'OPTIONS': {
@@ -122,4 +125,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_ROOT = '/tmp/static/' # 系统部署上线后的静态资源路径
+STATIC_URL = '/static/'     # 静态资源的起始路径
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR,'templates',THEME,'static')
+]
