@@ -15,7 +15,6 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
@@ -26,7 +25,6 @@ SECRET_KEY = '1^)-k5p^op1(j133wpyrr$juu4n2=+199i9_47wxl7y-le4btg'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -44,6 +42,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'blog.middleware.user_id.UserIDMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -56,13 +55,12 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'typeidea.urls'
 
 # THEME = 'default'
-THEME ='bootstrap'
+THEME = 'bootstrap'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates',THEME)]
-        ,
+        'DIRS': [os.path.join(BASE_DIR, 'templates', THEME)],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -71,12 +69,14 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+            # 'libraries': {
+            #     'comment_block': "comment.templatetags.comment_block"
+            # },
         },
-    },
+    }
 ]
 
 WSGI_APPLICATION = 'typeidea.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
@@ -87,7 +87,6 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -107,7 +106,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
@@ -121,12 +119,11 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
-STATIC_ROOT = '/tmp/static/' # 系统部署上线后的静态资源路径
-STATIC_URL = '/static/'     # 静态资源的起始路径
+STATIC_ROOT = '/tmp/static/'  # 系统部署上线后的静态资源路径
+STATIC_URL = '/static/'  # 静态资源的起始路径
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR,'templates',THEME,'static')
+    os.path.join(BASE_DIR, 'templates', THEME, 'static')
 ]

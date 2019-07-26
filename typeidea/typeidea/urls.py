@@ -41,6 +41,12 @@ function view url config
 class-based view url config
 '''
 from blog.views import IndexView, CategoryView, TagView, PostDetailView, SearchView, AuthorView
+from config.views import LinkView
+from comment.views import CommentView
+
+from django.contrib.sitemaps import views as sitemap_views
+from blog.rss import LatestPostFeed
+from blog.sitemap import PostSitemap
 
 urlpatterns = [
     url(r'^$', IndexView.as_view(), name='index'),
@@ -49,8 +55,12 @@ urlpatterns = [
     url(r'^post/(?P<post_id>\d+).html$', PostDetailView.as_view(), name='post-detail'),
     url(r"^search/$", SearchView.as_view(), name='search'),
     url(r'^author/(?P<owner_id>\d+)/$', AuthorView.as_view(), name='author'),
+    path("links/", LinkView.as_view(), name='links'),
+    path('comment/', CommentView.as_view(), name='comment'),
 
-    # path("links/",links,name='links'),
+    url(r'^rss|feed/', LatestPostFeed(), name='rss'),
+    url(r'^sitemap\.xml$', sitemap_views.sitemap, {'sitemaps': {'posts': PostSitemap}}),
+
     path("user_admin/", admin.site.urls, name='user-admin'),
     path("cus_admin/", custom_site.urls, name='cus-admin'),
 ]

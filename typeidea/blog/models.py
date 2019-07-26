@@ -1,6 +1,7 @@
 from django.contrib.auth.models import User
 from django.db import models
-
+import mistune
+from django.utils.functional import cached_property
 
 # Create your models here.
 class Category(models.Model):
@@ -85,6 +86,7 @@ class Post(models.Model):
     title = models.CharField(max_length=255, verbose_name='标题')
     desc = models.CharField(max_length=1024, blank=True, verbose_name='摘要')
     content = models.TextField(help_text='正文必须为Markdown格式', verbose_name='正文')
+    content_html = models.TextField(blank=True,editable=False,verbose_name='正文html代码')
     status = models.PositiveIntegerField(choices=STATUS_ITEMS, default=STATUS_NORMAL, verbose_name='状态')
     category = models.ForeignKey(Category, verbose_name='分类', on_delete=models.CASCADE)
     tag = models.ManyToManyField(Tag, verbose_name='标签')
@@ -94,6 +96,12 @@ class Post(models.Model):
     # 新增字段
     pv = models.PositiveIntegerField(default=1)
     uv = models.PositiveIntegerField(default=1)
+
+    def save(self, force_insert=False, force_update=False, using=None,
+             update_fields=None):
+        self.content_html = mistune.markdown(self.content)
+        super().save()
+
 
     @staticmethod
     def get_by_tag(tag_id):
@@ -126,6 +134,10 @@ class Post(models.Model):
     @classmethod
     def hot_posts(cls):
         return cls.objects.filter(status=cls.STATUS_NORMAL).order_by('-pv')
+
+    @cached_property
+    def tags(self):
+        return ','.join(self.tag.values_list('name',flat=True))
 
     def __str__(self):
         return self.title
