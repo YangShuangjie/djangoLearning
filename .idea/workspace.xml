@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="204442b0-8434-4497-932c-c0c919a7dabe" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/typeidea.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/typeidea.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/typeidea/blog/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/typeidea/blog/adminforms.py" beforeDir="false" afterPath="$PROJECT_DIR$/typeidea/blog/adminforms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/typeidea/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/typeidea/blog/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/typeidea/comment/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/typeidea/config/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/typeidea/typeidea/BaseModelAdmin.py" beforeDir="false" afterPath="$PROJECT_DIR$/typeidea/typeidea/BaseModelAdmin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/typeidea/typeidea/settings/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/typeidea/typeidea/settings/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/typeidea/typeidea/settings/develop.py" beforeDir="false" afterPath="$PROJECT_DIR$/typeidea/typeidea/settings/develop.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/typeidea/typeidea/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/typeidea/typeidea/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,7 +34,7 @@
         <counts>
           <entry key="html" value="4091" />
           <entry key="js" value="303" />
-          <entry key="py" value="21783" />
+          <entry key="py" value="24693" />
           <entry key="xml" value="546" />
         </counts>
       </usages-collector>
@@ -51,7 +43,7 @@
           <entry key="DjangoUrlPath" value="24" />
           <entry key="HTML" value="4067" />
           <entry key="JavaScript" value="303" />
-          <entry key="Python" value="21783" />
+          <entry key="Python" value="24693" />
           <entry key="XML" value="546" />
         </counts>
       </usages-collector>
@@ -59,7 +51,7 @@
         <counts>
           <entry key="html" value="20" />
           <entry key="js" value="1" />
-          <entry key="py" value="89" />
+          <entry key="py" value="97" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
@@ -67,7 +59,7 @@
         <counts>
           <entry key="HTML" value="20" />
           <entry key="JavaScript" value="1" />
-          <entry key="Python" value="89" />
+          <entry key="Python" value="97" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
@@ -75,15 +67,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/typeidea/typeidea/storage.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/typeidea/typeidea/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1088">
-              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+            <state relative-caret-position="341">
+              <caret line="113" lean-forward="true" selection-start-line="113" selection-end-line="113" />
               <folding>
-                <element signature="e#0#22#0" expanded="true" />
-                <marker date="1564323172797" expanded="true" signature="230:231" ph="..." />
-                <marker date="1564323172797" expanded="true" signature="230:235" ph="..." />
+                <element signature="e#664#704#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -92,54 +82,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/typeidea/typeidea/settings/base.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="6" column="26" lean-forward="true" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/typeidea/comment/templatetags/comment_block.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-              <folding>
-                <element signature="e#0#27#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/typeidea/blog/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2048">
-              <caret line="68" column="34" selection-start-line="68" selection-start-column="34" selection-end-line="68" selection-end-column="34" />
-              <folding>
-                <marker date="1564164294607" expanded="true" signature="291:298" ph="..." />
-                <marker date="1564164294607" expanded="true" signature="1087:1094" ph="..." />
-                <marker date="1564164294607" expanded="true" signature="1521:1554" ph="..." />
-                <marker date="1564164294607" expanded="true" signature="1580:2476" ph="..." />
-                <marker date="1564164294607" expanded="true" signature="1785:2476" ph="..." />
-                <marker date="1564164294607" expanded="true" signature="2304:2476" ph="..." />
-                <marker date="1564164294607" expanded="true" signature="2506:2511" ph="..." />
-                <marker date="1564164294607" expanded="true" signature="3079:3084" ph="..." />
-                <marker date="1564164294607" expanded="true" signature="3983:3988" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/typeidea/typeidea/autocomplete.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="10" column="17" lean-forward="true" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-                <marker date="1564301160405" expanded="true" signature="128:133" ph="..." />
-                <marker date="1564301160405" expanded="true" signature="477:482" ph="..." />
-              </folding>
+            <state relative-caret-position="341">
+              <caret line="178" column="1" selection-start-line="178" selection-start-column="1" selection-end-line="178" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -147,8 +91,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/typeidea/blog/adminforms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1196">
-              <caret line="53" column="35" lean-forward="true" selection-start-line="53" selection-start-column="35" selection-end-line="53" selection-end-column="35" />
+            <state relative-caret-position="1696">
+              <caret line="53" column="35" selection-start-line="53" selection-start-column="35" selection-end-line="53" selection-end-column="35" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
               </folding>
@@ -157,10 +101,51 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/typeidea/blog/serializers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="128">
+              <caret line="25" column="49" selection-start-line="25" selection-start-column="49" selection-end-line="25" selection-end-column="49" />
+              <folding>
+                <element signature="e#0#49#0" expanded="true" />
+                <marker date="1564332126437" expanded="true" signature="558:563" ph="..." />
+                <marker date="1564332126437" expanded="true" signature="806:938" ph="..." />
+                <marker date="1564332126437" expanded="true" signature="1001:1006" ph="..." />
+                <marker date="1564332126437" expanded="true" signature="1142:1147" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/typeidea/blog/apis.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+                <marker date="1564332179253" expanded="true" signature="286:293" ph="..." />
+                <marker date="1564332179253" expanded="true" signature="532:539" ph="..." />
+                <marker date="1564332179253" expanded="true" signature="907:912" ph="..." />
+                <marker date="1564332179253" expanded="true" signature="1490:1495" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/typeidea/typeidea/settings/develop.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="544">
+              <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/typeidea/typeidea/templates/bootstrap/static/js/post_editor.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="608">
-              <caret line="19" column="10" lean-forward="true" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+              <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -196,11 +181,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/typeidea/blog/adminx.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="364">
-              <caret line="198" lean-forward="true" selection-start-line="198" selection-end-line="198" />
+              <caret line="198" selection-start-line="198" selection-end-line="198" />
               <folding>
                 <element signature="e#0#48#0" expanded="true" />
               </folding>
@@ -214,8 +199,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="Python Script" />
         <option value="JavaScript File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -243,7 +228,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/typeidea/settings.py" />
-        <option value="$PROJECT_DIR$/typeidea/typeidea/settings/develop.py" />
         <option value="$PROJECT_DIR$/typeidea/manage.py" />
         <option value="$PROJECT_DIR$/typeidea/typeidea/custom_site.py" />
         <option value="$PROJECT_DIR$/typeidea/config/admin.py" />
@@ -278,13 +262,17 @@
         <option value="$PROJECT_DIR$/typeidea/comment/adminx.py" />
         <option value="$PROJECT_DIR$/typeidea/config/adminx.py" />
         <option value="$PROJECT_DIR$/typeidea/typeidea/autocomplete.py" />
-        <option value="$PROJECT_DIR$/typeidea/typeidea/urls.py" />
         <option value="$PROJECT_DIR$/typeidea/typeidea/storage.py" />
-        <option value="$PROJECT_DIR$/typeidea/typeidea/settings/base.py" />
         <option value="$PROJECT_DIR$/typeidea/blog/models.py" />
         <option value="$PROJECT_DIR$/typeidea/blog/adminforms.py" />
         <option value="$PROJECT_DIR$/typeidea/typeidea/templates/bootstrap/static/js/post_editor.js" />
         <option value="$PROJECT_DIR$/typeidea/blog/adminx.py" />
+        <option value="$PROJECT_DIR$/typeidea/blog/serializers.py" />
+        <option value="$PROJECT_DIR$/typeidea/typeidea/settings/base.py" />
+        <option value="$PROJECT_DIR$/typeidea/blog/apis.py" />
+        <option value="/usr/local/apps/anaconda3/lib/python3.7/site-packages/Django-2.2.3-py3.7.egg/django/forms/boundfield.py" />
+        <option value="$PROJECT_DIR$/typeidea/typeidea/settings/develop.py" />
+        <option value="$PROJECT_DIR$/typeidea/typeidea/urls.py" />
       </list>
     </option>
   </component>
@@ -338,6 +326,13 @@
               <item name="typeidea" type="462c0819:PsiDirectoryNode" />
               <item name="typeidea" type="462c0819:PsiDirectoryNode" />
               <item name="typeidea" type="462c0819:PsiDirectoryNode" />
+              <item name="settings" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="typeidea" type="b2602c69:ProjectViewProjectNode" />
+              <item name="typeidea" type="462c0819:PsiDirectoryNode" />
+              <item name="typeidea" type="462c0819:PsiDirectoryNode" />
+              <item name="typeidea" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -350,22 +345,12 @@
             </path>
             <path>
               <item name="typeidea" type="b2602c69:ProjectViewProjectNode" />
-              <item name="typeidea" type="462c0819:PsiDirectoryNode" />
-              <item name="typeidea" type="462c0819:PsiDirectoryNode" />
-              <item name="typeidea" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
             <path>
               <item name="typeidea" type="b2602c69:ProjectViewProjectNode" />
-              <item name="typeidea" type="462c0819:PsiDirectoryNode" />
-              <item name="typeidea" type="462c0819:PsiDirectoryNode" />
-              <item name="typeidea" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.7 &gt;" type="70bed36:NamedLibraryElementNode" />
             </path>
           </expand>
           <select />
@@ -461,8 +446,8 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3298731" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5008347" side_tool="true" weight="0.24798155" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49916527" visible="true" weight="0.21799308" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50139123" side_tool="true" weight="0.3183391" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4986088" visible="true" weight="0.3183391" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -505,17 +490,7 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/typeidea/typeidea/settings.py" />
-    <entry file="file:///usr/local/apps/anaconda3/lib/python3.7/site-packages/Django-2.2.3-py3.7.egg/django/db/models/fields/related.py" />
-    <entry file="file://$PROJECT_DIR$/typeidea/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-140">
-          <caret line="9" column="84" selection-start-line="9" selection-start-column="84" selection-end-line="9" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/apps/anaconda3/lib/python3.7/site-packages/Django-2.2.3-py3.7.egg/django/db/models/query.py" />
-    <entry file="file:///usr/local/apps/anaconda3/lib/python3.7/site-packages/Django-2.2.3-py3.7.egg/django/urls/conf.py" />
     <entry file="file:///usr/local/apps/anaconda3/lib/python3.7/site-packages/Django-2.2.3-py3.7.egg/django/contrib/admin/sites.py" />
     <entry file="file://$PROJECT_DIR$/typeidea/__init__.py" />
     <entry file="file://$PROJECT_DIR$/typeidea/typeidea/custom_site.py">
@@ -641,13 +616,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/typeidea/typeidea/settings/develop.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/typeidea/typeidea/templates/bootstrap/blog/detail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="992">
@@ -666,6 +634,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="992">
           <caret line="35" column="32" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#49#0" expanded="true" />
+            <marker date="1564164548604" expanded="true" signature="202:207" ph="..." />
+            <marker date="1564164548604" expanded="true" signature="420:425" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -673,6 +646,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="512">
           <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+            <marker date="1564158807168" expanded="true" signature="131:136" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -714,15 +691,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5280">
           <caret line="168" selection-start-line="168" selection-end-line="168" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/typeidea/typeidea/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="81" selection-start-line="81" selection-end-line="81" />
           <folding>
-            <element signature="e#664#704#0" expanded="true" />
+            <element signature="e#22#33#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -745,17 +715,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/typeidea/typeidea/settings/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="6" column="26" lean-forward="true" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/typeidea/typeidea/storage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1088">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
             <marker date="1564323172797" expanded="true" signature="230:231" ph="..." />
@@ -767,7 +730,7 @@
     <entry file="file://$PROJECT_DIR$/typeidea/comment/templatetags/comment_block.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="448">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
           </folding>
@@ -777,7 +740,7 @@
     <entry file="file://$PROJECT_DIR$/typeidea/typeidea/autocomplete.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
-          <caret line="10" column="17" lean-forward="true" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
             <marker date="1564301160405" expanded="true" signature="128:133" ph="..." />
@@ -813,29 +776,95 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/typeidea/blog/adminforms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1196">
-          <caret line="53" column="35" lean-forward="true" selection-start-line="53" selection-start-column="35" selection-end-line="53" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/typeidea/typeidea/templates/bootstrap/static/js/post_editor.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="608">
-          <caret line="19" column="10" lean-forward="true" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+          <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/typeidea/blog/adminx.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="364">
-          <caret line="198" lean-forward="true" selection-start-line="198" selection-end-line="198" />
+          <caret line="198" selection-start-line="198" selection-end-line="198" />
           <folding>
             <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/typeidea/blog/adminforms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1696">
+          <caret line="53" column="35" selection-start-line="53" selection-start-column="35" selection-end-line="53" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/apps/anaconda3/lib/python3.7/site-packages/Django-2.2.3-py3.7.egg/django/urls/conf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1312">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/typeidea/blog/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="25" column="49" selection-start-line="25" selection-start-column="49" selection-end-line="25" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#49#0" expanded="true" />
+            <marker date="1564332126437" expanded="true" signature="558:563" ph="..." />
+            <marker date="1564332126437" expanded="true" signature="806:938" ph="..." />
+            <marker date="1564332126437" expanded="true" signature="1001:1006" ph="..." />
+            <marker date="1564332126437" expanded="true" signature="1142:1147" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/typeidea/typeidea/settings/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="178" column="1" selection-start-line="178" selection-start-column="1" selection-end-line="178" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/apps/anaconda3/lib/python3.7/site-packages/Django-2.2.3-py3.7.egg/django/forms/boundfield.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="93" column="9" lean-forward="true" selection-start-line="93" selection-start-column="9" selection-end-line="93" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/typeidea/blog/apis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+            <marker date="1564332179253" expanded="true" signature="286:293" ph="..." />
+            <marker date="1564332179253" expanded="true" signature="532:539" ph="..." />
+            <marker date="1564332179253" expanded="true" signature="907:912" ph="..." />
+            <marker date="1564332179253" expanded="true" signature="1490:1495" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/typeidea/typeidea/settings/develop.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/typeidea/typeidea/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="113" lean-forward="true" selection-start-line="113" selection-end-line="113" />
+          <folding>
+            <element signature="e#664#704#0" expanded="true" />
           </folding>
         </state>
       </provider>

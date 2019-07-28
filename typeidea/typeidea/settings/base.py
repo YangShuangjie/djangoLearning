@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'dal_select2', #django-autocomplete-light
     'ckeditor',
     'ckeditor_uploader',#ckeditor文件上传功能
+    'rest_framework',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -164,3 +165,15 @@ CKEDITOR_UPLOAD_PATH = "article_images"
 ----------------------------------------------------
 """
 DEFAULT_FILE_STORAGE = 'typeidea.storage.WatermarkStorage'
+
+
+"""
+----------------------------------------------------
+REST_FRAMEWORK配置
+----------------------------------------------------
+"""
+REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema', #解决api/docs报错问题
+    'DEFAULT_PAGINATION_CLASS':'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE':2,
+}

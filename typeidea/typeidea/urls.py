@@ -53,6 +53,17 @@ from .autocomplete import CategoryAutocomplete,TagAutocomplete
 from django.conf import settings
 from django.conf.urls.static import  static
 
+# from blog.apis import post_list,PostList
+from blog.apis import PostViewSet,CategoryViewSet
+from rest_framework.routers import DefaultRouter
+from rest_framework.documentation import include_docs_urls #配置api文档
+
+router = DefaultRouter()
+router.register(r'post',PostViewSet,base_name='api-post')
+router.register(r'category',CategoryViewSet,base_name='api-category')
+
+
+
 urlpatterns = [
     url(r'^$', IndexView.as_view(), name='index'),
     url(r'^category/(?P<category_id>\d+)/$', CategoryView.as_view(), name='category-list'),
@@ -63,15 +74,25 @@ urlpatterns = [
     url(r"^links/$", LinkView.as_view(), name='links'),
     url(r'^comment/$', CommentView.as_view(), name='comment'),
 
-
+    # 多选项非完全加载[自动补全]
     url(r'^category-autocomplete/$',CategoryAutocomplete.as_view(),name='category-autocomplete'),
     url(r'^tag-autocomplete/$',TagAutocomplete.as_view(),name='tag-autocomplete'),
 
+    # 编辑器文件上传
     url(r'^ckeditor/',include('ckeditor_uploader.urls')),
 
+
+    # RESTful API
+    # url(r'^api/post/',post_list,name='post-list'),
+    # url(r'^api/post/',PostList.as_view(),name='post-list'),
+    url(r'^api/',include((router.urls,'blog'),namespace='api')),
+    url(r'api/docs/',include_docs_urls(title="typeidea apis")),
+
+    # rss 与　sitemap
     url(r'^rss|feed/', LatestPostFeed(), name='rss'),
     url(r'^sitemap\.xml$', sitemap_views.sitemap, {'sitemaps': {'posts': PostSitemap}}),
 
+    # admin page
     url("^user_admin/", admin.site.urls, name='user-admin'),
     url("^cus_admin/", custom_site.urls, name='cus-admin'),
 
@@ -79,3 +100,14 @@ urlpatterns = [
     url(r'^admin/',xadmin.site.urls,name='xadmin'),
 
 ] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+
+"""
+-----------------------------------
+debug url config
+-----------------------------------
+"""
+if settings.DEBUG:
+    import debug_toolbar
+    urlpatterns = [
+        url(r'^__debug__/',include(debug_toolbar.urls)),
+    ] + urlpatterns
