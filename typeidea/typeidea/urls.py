@@ -14,8 +14,8 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
-from django.urls import path
-from django.conf.urls import url
+# from django.urls import path
+from django.conf.urls import url,include
 from django.contrib import admin
 from typeidea.custom_site import custom_site
 
@@ -48,6 +48,11 @@ from django.contrib.sitemaps import views as sitemap_views
 from blog.rss import LatestPostFeed
 from blog.sitemap import PostSitemap
 
+import xadmin
+from .autocomplete import CategoryAutocomplete,TagAutocomplete
+from django.conf import settings
+from django.conf.urls.static import  static
+
 urlpatterns = [
     url(r'^$', IndexView.as_view(), name='index'),
     url(r'^category/(?P<category_id>\d+)/$', CategoryView.as_view(), name='category-list'),
@@ -55,12 +60,22 @@ urlpatterns = [
     url(r'^post/(?P<post_id>\d+).html$', PostDetailView.as_view(), name='post-detail'),
     url(r"^search/$", SearchView.as_view(), name='search'),
     url(r'^author/(?P<owner_id>\d+)/$', AuthorView.as_view(), name='author'),
-    path("links/", LinkView.as_view(), name='links'),
-    path('comment/', CommentView.as_view(), name='comment'),
+    url(r"^links/$", LinkView.as_view(), name='links'),
+    url(r'^comment/$', CommentView.as_view(), name='comment'),
+
+
+    url(r'^category-autocomplete/$',CategoryAutocomplete.as_view(),name='category-autocomplete'),
+    url(r'^tag-autocomplete/$',TagAutocomplete.as_view(),name='tag-autocomplete'),
+
+    url(r'^ckeditor/',include('ckeditor_uploader.urls')),
 
     url(r'^rss|feed/', LatestPostFeed(), name='rss'),
     url(r'^sitemap\.xml$', sitemap_views.sitemap, {'sitemaps': {'posts': PostSitemap}}),
 
-    path("user_admin/", admin.site.urls, name='user-admin'),
-    path("cus_admin/", custom_site.urls, name='cus-admin'),
-]
+    url("^user_admin/", admin.site.urls, name='user-admin'),
+    url("^cus_admin/", custom_site.urls, name='cus-admin'),
+
+
+    url(r'^admin/',xadmin.site.urls,name='xadmin'),
+
+] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
